@@ -1,5 +1,5 @@
 .techstack{
-    padding-left: 130px ;
+    /* padding-left: 130px ; */
     margin-top: 60px;
 }
 
@@ -12,22 +12,237 @@
 .techstack h2{
     font-weight: bold;
 }
+.techstack p{
+    color: #000
+}
 
-.techstack .card{
+
+/* .techstack .card{
     box-shadow: rgb(222, 230, 236) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     cursor: pointer;
 
-}
+} */
 
 .techstack .tech-icon{
     font-size: 2rem;
     margin-right: 10px;
 }
 
-.techstack .card:hover{
+/* .techstack .card:hover{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    background-color: rgb(240, 159, 67);
+    background-color: #138781;
     color: white;
     border: none;
     transition: 0.2s;
+} */
+
+
+
+
+.techstack .card {
+  width: 100%; /* Relative to the parent container */
+  max-width: 285px; /* Maximum width */
+  height: auto; /* Adjust height dynamically */
+    background: #ffffff;
+    box-shadow: rgb(222, 230, 236) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    cursor: pointer;
+
+    transition: background-size 0.5s linear;
+    background-image: linear-gradient(#138781 0 0);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+  }
+  
+  .techstack .HTML:hover {
+    background-size: 80% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .CSS:hover {
+    background-size: 80% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Bootstrap:hover {
+    background-size: 70% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .React:hover {
+    background-size: 75% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .JavaScript:hover {
+    background-size: 80% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .TypeScript:hover {
+    background-size: 80% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Docker:hover {
+    background-size: 20% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .AWS:hover {
+    background-size: 20% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Firebase:hover {
+    background-size: 60% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .GitHub:hover {
+    background-size: 65% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .SQL:hover {
+    background-size: 60% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Angular:hover {
+    background-size: 40% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Android:hover {
+    background-size: 55% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Java:hover {
+    background-size: 70% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .MongoDB:hover {
+    background-size: 65% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Express:hover {
+    background-size: 75% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .NodeJs:hover {
+    background-size: 75% 100%; /* Adjust the percentage as needed */
+  }
+/* HTML: <div class="loader"></div> */
+/* .techstack .card:hover {
+    width: 285px;
+    height: 65px;
+    background:
+     linear-gradient(#39a27c 0 0) 0/0% no-repeat
+     #ddd;
+    animation: l1 2s infinite linear;
+  }
+  @keyframes l1 {
+      100% {background-size:100%}
+  } */
+
+/* ======= DARK ======= */
+#dark .techstack .card{
+   
+    background: #2d2d44;
+    /* box-shadow: rgb(255, 255, 255) 3px 3px 6px 0px inset, 
+    rgba(240, 240, 240, 0.5) -3px -3px 6px 1px inset; */
+    cursor: pointer;
+   
+
+    transition: background-size 0.5s linear;
+    background-image: linear-gradient(#ffffff 0 0);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    
+    
+    
 }
+#dark  .techstack .card:hover{
+    
+    color: #000;
+}
+
+#dark .techstack .HTML:hover {
+    background-size: 80% 100%; /* Adjust the percentage as needed */
+    
+    
+  }
+
+#dark .techstack .CSS:hover {
+  background-size: 80% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Bootstrap:hover {
+  background-size: 70% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .React:hover {
+  background-size: 75% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .JavaScript:hover {
+  background-size: 80% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .TypeScript:hover {
+  background-size: 80% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Docker:hover {
+  background-size: 20% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .AWS:hover {
+  background-size: 20% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Firebase:hover {
+  background-size: 60% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .GitHub:hover {
+  background-size: 65% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .SQL:hover {
+  background-size: 60% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Angular:hover {
+  background-size: 40% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Android:hover {
+  background-size: 55% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Java:hover {
+  background-size: 70% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .MongoDB:hover {
+  background-size: 65% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Express:hover {
+  background-size: 75% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .NodeJs:hover {
+  background-size: 75% 100%; /* Adjust the percentage as needed */
+}
+
+
+#dark .techstack h2{
+    color: #ffffff;
+}
+#dark .techstack p{
+    color: #f8f8f8
+}
+
+/* #dark .techstack .card:hover{
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+    background-color: rgb(255, 254, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    transition: 0.2s;
+} */
+
+/* =============================== */
+
+
+
+
+  
+
+@media (max-width: 768px) {
+  .techstack .card {
+      width: 90%; 
+      max-width: none; 
+      
+  }
+
+  
+}
+
+
+@media (max-width: 600px) {
+    .techstack {
+      padding: 0;
+      margin: 0;
+      margin-top: 50px;
+    }
+  
+    .techstack hr {
+      width: 280px;
+    }
+
+    .techstack .card {
+      width: 100%; 
+      padding: 10px; 
+  }
+
+   
+  }

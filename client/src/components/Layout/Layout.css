@@ -1,13 +1,21 @@
 .sidebar-section{
     display: flex;
-    background-color: black;
+    /* animation: gradientShift 10s ease infinite;
+    color: #eee; */
+    z-index: -99;
+    height: 100vh;
+    background: url('../../assets/images/BlackBackground.jpg') no-repeat center center ;
+    background-size: cover;
+    
 }
 
+
 .sidebar{
-    height: 100vh;
-    background-color: #1e1e2c;
-    width: 90px;
+    height: 50px;
+    background-color: transparent;
+    width: 50px;
     position: fixed;
+    z-index: 1;
 
 }
 .sidebar-toggle{
@@ -16,13 +24,37 @@
 
 .sidebar-toggle-icon{
     display: flex;
-    align-items: right;
-    justify-content: right; 
+    align-items: left;
+    justify-content: left; 
     cursor: pointer;
 }
 
 .sidebar-toggle-icon p svg{
-    background-color: #f29f67;
+    background-color:transparent;
+    color: rgb(0, 0, 0);
+    margin-top:30px;
+}
+/* ==== MOBILE VIEW ========== */
+@media (max-width: 600px) {
+    .sidebar {
+      display: none;
+    }
+  }
+
+
+/* =======Dark Mode======= */
+#dark .sidebar-section{
+    background: url('../../assets/images/WhiteBackground.jpg') no-repeat center center ;
+    background-size: cover;
+    
+
+}
+#dark .sidebar-toggle-icon p svg{
+    background-color: transparent;
     color: white;
     margin-top:30px;
+}
+
+#dark .sidebar{
+    background-color: transparent;
 }

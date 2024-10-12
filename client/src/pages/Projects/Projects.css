@@ -1,6 +1,10 @@
 .project{
-    padding-left: 130px ;
+    /* padding-left: 130px ; */
     margin-top: 60px;
+    height: auto;
+    height: 130vh;
+    
+    
 }
 
 .project hr{
@@ -12,6 +16,9 @@
 .project h2{
     font-weight: bold;
 }
+.project p{
+  color: #000000;
+}
 
 #ads{
     margin: 30px 0px 30px 0px;
@@ -22,21 +29,25 @@
     position:absolute;
     left:-10px;
     top:-20px;
-    background: #f29f67;
+    background: 
+    #30b3cd;
+    
 text-align: center;
 border-radius: 30px 30px 30px 30px;
-color:black;
+color:rgb(255, 255, 255);
 padding:5px 10px;
 font-size:14px;
 }
 
 .project .card img{
-    height: 150px;
+  
+    height: 200px;
     width: 100%;
 }
 
+
 .card-details-badge{
-    background-color: aquamarine;
+    background-color: #149cac;
     text-align: center;
     border-radius: 30px 30px 30px 30px;
     padding: 5px 10px ;
@@ -60,7 +71,7 @@ font-size:14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(6, 55, 38);
+    background-color: #138781;
     color: rgb(255, 255, 255);
     border-radius: 80px;
     font-size:16px;
@@ -74,12 +85,120 @@ font-size:14px;
     background-color: white;
     color: rgb(6, 55, 38);
     background: transparent;
-    border: 2px solid #12b5b3;
+    border: 2px solid #138781;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.project .card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project .card:hover{
     background-color: white;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    transform: translateY(-3px);
 }
+
+
+/* =========================== */
+/* #dark .project .card{
+  background-color: #e2d7fc;
+}
+
+#dark .ad-btn{
+background-color: #420039;
+}
+#dark .ad-btn:hover{
+  background-color: #f6f2ff;
+  border: 2px solid #420039;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+}
+
+#dark .card-details-badge{
+  background-color: #932F6D;
+}
+
+#dark .card-notify-badge{
+  background-color: #E07BE0;
+} */
+
+
+  /* =============================== */
+  @media (max-width: 600px) {
+    .project {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 70rem;
+      margin-top: 50px;
+      padding-left: 0; /* Remove padding for smaller devices */
+    }
+
+    .project hr {
+      width: 280px;
+    }
+
+    .project .card {
+      margin-top: 30px;
+      width: 100%; /* Ensure cards take full width on small screens */
+    }
+
+    /* You can also try to use grid or flexbox for better alignment */
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+}
+
+
+  /* ======== */
+  /* =========================== */
+/* Updated Dark Mode for Project Cards */
+#dark .project .card {
+  background-color: #000000; /* Darker background for the card */
+  color: #f5f5f5; /* Light text color for readability */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for elegance */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 6px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+#dark .project h2{
+  color: white;
+}
+
+#dark .project p{
+  color: #f4f4f4;
+}
+
+#dark .project .card:hover {
+  background-color: #3e3e63; /* Lighter shade on hover */
+  transform: translateY(-5px); /* Slight elevation on hover */
+}
+
+#dark .ad-btn {
+  background-color: #2d2d44; /* Dark button background */
+  color: #f7f2fc; /* Text color */
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#dark .ad-btn:hover {
+  background-color: #f6f2ff; /* Softer hover background */
+  color: #231e23; /* Text color changes on hover */
+  border: 2px solid #211e21;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 6px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+#dark .card-details-badge {
+  background-color: #cacaca; /* More professional dark purple */
+  color: rgb(2, 2, 2); /* Maintain contrast with white text */
+}
+
+#dark .card-notify-badge {
+  background-color: #cacaca; /* Bright accent color for notifications */
+  color: #000000; /* White text */
+}
+
+/* =============================== */

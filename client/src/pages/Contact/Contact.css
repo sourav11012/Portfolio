@@ -1,7 +1,31 @@
 .contact {
-    margin-left: 130px;
-    margin-bottom: 60px;
-    padding-top: 50px;
+  margin-top: 60px;
+  padding: 20px 0; /* Adding padding to create space */
+  clear: both; /* Ensure this section clears any floating elements */
+}
+
+  .contact-header{
+    height: 4rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .contact-header h2{
+    
+    font-size: 40px;
+  
+    color: #0b1f19;
+  }
+  .contact-header hr{
+    color: rgb(0, 0, 0);
+    width: 400px;
+    margin: 10px auto;
+}
+
+  .card{
+    margin-top: 20px;
   }
   
   .card0 {
@@ -67,25 +91,81 @@
   }
   
   .button {
-    background-color: #1e1e2c;
+    background-color: #138781;
     color: white;
     border-radius: 2px;
     margin-top: 15px;
     padding: 10px;
+    transition: background-color 0.3s ease;
   }
   
   .button:hover {
-    background-color: #000;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #138781;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+  
   }
   
+
+
+  /* =========================== */
+/* Updated Dark Mode for Contact Section */
+
+
+
+#dark .card {
+  background-color: #222232; 
+  color: #f5f5f5; 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 6px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+#dark .card2:hover {
+  background-color: #3e3e63; 
+  transform: translateY(-5px); 
+}
+
+#dark .button {
+  background-color: #1e1e1e; 
+  color: #f5f5f5; 
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#dark .button:hover {
+  background-color: #f6eaff; 
+  color: #1e1e1e; 
+  border: 2px solid #1e1e1e;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 6px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+#dark input,
+#dark textarea {
+  background-color: #3e3e63; /* Darker input background */
+  color: #f7effe; /* Light text color */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+#dark input:focus,
+#dark textarea:focus {
+  outline: 1px solid #130419; /* Focus outline in dark mode */
+}
+
+#dark .contact-header h2 {
+  color: #ffffff; /* Softer header text color */
+}
+
+/* ======================== */
+
   /* ======================== */
   @media (max-width: 600px) {
     .contact {
-      margin: 0;
-      padding: 0;
-      margin-top: 50px;
-    }
+      margin-top: 120px; /* Increase margin-top */
+      padding: 20px 0; /* Adjust for smaller screens */
+  }
     .contact .card2 {
       margin: 0;
     }

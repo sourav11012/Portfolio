@@ -1,90 +1,182 @@
 import React from "react";
 import "./Menus.css";
+// import Zoom from "react-reveal/Zoom";
+
+import { Link } from "react-scroll";
+
 import {
   FcAbout,
   FcBiotech,
-  FcContacts,
+  FcBusinessContact,
   FcHome,
   FcPortraitMode,
   FcReadingEbook,
   FcVideoProjector,
-  FcVoicePresentation,
 } from "react-icons/fc";
-import Home from "../../pages/Home/Home";
 const Menus = ({ toggle }) => {
   return (
     <>
       {toggle ? (
         <>
-          <div className="navbar-profile-pic">
-            <img src="logo192.png" alt="profile pic" />
-          </div>
-          <div className="nav-items">
-            <div className="nav-item">
-              <div className="nav-link">
-                <FcHome />
-                Home
-              </div>
-              <div className="nav-link">
-                <FcAbout />
-                About
-              </div>
-              <div className="nav-link">
-                <FcPortraitMode />
-                Work Experience
-              </div>
-              <div className="nav-link">
-                <FcBiotech />
-                Tech Stack
-              </div>
-              <div className="nav-link">
-                <FcReadingEbook />
-                Education
-              </div>
-              <div className="nav-link">
-                <FcVideoProjector />
-                Projects
-              </div>
-              <div className="nav-link">
-                <FcVoicePresentation />
-                Testimonial
-              </div>
+          {/* <Fade left>
+            <div className="navbar-profile-pic">
+              <img src={profilePhoto} alt="profile pic" />
+            </div>
+          </Fade> */}
 
-              <div className="nav-link">
-                <FcContacts />
-                Contact
+          <>
+            <div className="nav-items">
+              <div className="nav-item">
+                <div className="nav-link">
+                  <Link
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={100}
+                  >
+                    <FcHome size={30} />
+                    Home
+                  </Link>
+                </div>
+                <div className="nav-link">
+                  <Link
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={100}
+                  >
+                    <FcAbout size={30} />
+                    About
+                  </Link>
+                </div>
+                <div className="nav-link">
+                  <Link
+                    to="education"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={100}
+                  >
+                    <FcReadingEbook size={30} />
+                    Education
+                  </Link>
+                </div>
+
+                <div className="nav-link">
+                  <Link
+                    to="techstack"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={100}
+                  >
+                    <FcBiotech size={30} />
+                    Tech Stack
+                  </Link>
+                </div>
+
+                <div className="nav-link">
+                  <Link
+                    to="project"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={100}
+                  >
+                    <FcVideoProjector size={30} />
+                    Projects
+                  </Link>
+                </div>
+
+                <div className="nav-link">
+                  <Link
+                    to="contacts"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={100}
+                  >
+                    <FcBusinessContact size={30} />
+                    Contact
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          </>
         </>
       ) : (
         <>
           <div className="nav-items">
             <div className="nav-item">
               <div className="nav-link">
-                <FcHome title="Home" />
+                <Link
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={100}
+                >
+                  <FcHome size={30} />
+                </Link>
               </div>
               <div className="nav-link">
-                <FcAbout title="About" />
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={100}
+                >
+                  <FcAbout size={30} />
+                </Link>
               </div>
               <div className="nav-link">
-                <FcPortraitMode title="Work Experience" />
-              </div>
-              <div className="nav-link">
-                <FcBiotech title="Tech Stack" />
-              </div>
-              <div className="nav-link">
-                <FcReadingEbook title="Education" />
-              </div>
-              <div className="nav-link">
-                <FcVideoProjector title="Projects" />
-              </div>
-              <div className="nav-link">
-                <FcVoicePresentation title="Testimonials" />
+                <Link
+                  to="education"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={100}
+                >
+                  <FcReadingEbook size={30} />
+                </Link>
               </div>
 
               <div className="nav-link">
-                <FcContacts title="Contact" />
+                <Link
+                  to="techstack"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={100}
+                >
+                  <FcBiotech size={30} />
+                </Link>
+              </div>
+
+              <div className="nav-link">
+                <Link
+                  to="project"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={100}
+                >
+                  <FcVideoProjector size={30} />
+                </Link>
+              </div>
+              <div className="nav-link">
+                <Link
+                  to="contacts"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={100}
+                >
+                  <FcBusinessContact size={30} />
+                </Link>
               </div>
             </div>
           </div>

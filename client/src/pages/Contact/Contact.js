@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
+import contactMe from "../../assets/images/contactMe.webp";
 import "./Contact.css";
+import { useTheme } from "../../context/ThemeContext";
 // import Rotate from "react-reveal/Rotate";
 // import LightSpeed from "react-reveal/LightSpeed";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
@@ -9,6 +11,7 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
+  const [theme] = useTheme();
 
   //handle submit button
   const handleSubmit = async (e) => {
@@ -38,7 +41,13 @@ const Contact = () => {
 
   return (
     <>
-      <div className=" contact" id="contact">
+      <div className="contact" id="contacts">
+        <div className="row contact-header text-center">
+          <h2>
+            <b> Contact Me. </b>
+          </h2>
+          <hr />
+        </div>
         <div className="card card0 border-0">
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-6 col-sm-12">
@@ -46,7 +55,7 @@ const Contact = () => {
                 <div className="row border-line">
                   {/* <LightSpeed> */}
                   <img
-                    src="https://img.freepik.com/free-photo/hot-line-contact-us-call-center-search-interface_53876-124009.jpg?w=2000"
+                    src="https://st4.depositphotos.com/21389766/23112/i/450/depositphotos_231121068-stock-photo-contact-contact-write-email-support.jpg"
                     alt="contact"
                     className="image"
                   />
@@ -61,9 +70,58 @@ const Contact = () => {
                   <div className="row">
                     <h6>
                       Contact With
-                      <BsLinkedin color="blue" size={30} className="ms-2" />
-                      <BsGithub color="black" size={30} className="ms-2" />
-                      <BsFacebook color="blue" size={30} className="ms-2" />
+                      {theme === "light" ? (
+                        <>
+                          <a
+                            href="https://www.linkedin.com/in/souravshetye/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <BsLinkedin
+                              color="black"
+                              size={30}
+                              className="ms-2"
+                            />
+                          </a>
+
+                          <a
+                            href="https://github.com/Sourav0211"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <BsGithub
+                              color="black"
+                              size={30}
+                              className="ms-2"
+                            />
+                          </a>
+                        </>
+                      ) : (
+                        <>
+                          <a
+                            href="https://www.linkedin.com/in/souravshetye/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <BsLinkedin
+                              color="white"
+                              size={30}
+                              className="ms-2"
+                            />
+                          </a>
+                          <a
+                            href="https://github.com/Sourav0211"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <BsGithub
+                              color="white"
+                              size={30}
+                              className="ms-2"
+                            />
+                          </a>
+                        </>
+                      )}
                     </h6>
                   </div>
 
@@ -109,6 +167,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+
               {/* </Rotate> */}
             </div>
           </div>
