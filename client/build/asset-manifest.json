@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a34d19c7.css",
+    "main.js": "/static/js/main.e59ceb74.js",
+    "static/js/453.258b012d.chunk.js": "/static/js/453.258b012d.chunk.js",
+    "static/media/Ecommerce.png": "/static/media/Ecommerce.ccd48aa3a316a56a2998.png",
+    "static/media/myPhoto.jpeg": "/static/media/myPhoto.95f48c6dd6ec47aefce6.jpeg",
+    "static/media/PBAngular.png": "/static/media/PBAngular.bbfd850c8a111357c81f.png",
+    "static/media/Sourav_Shetye_Resume.pdf": "/static/media/Sourav_Shetye_Resume.af18c71742493a68573e.pdf",
+    "static/media/BlackBackground.jpg": "/static/media/BlackBackground.94fd0dcc9941331f82d6.jpg",
+    "static/media/android.png": "/static/media/android.bf21d477ae77c874a6a9.png",
+    "static/media/WhiteBackground.jpg": "/static/media/WhiteBackground.ab4fe512fab2dc851301.jpg",
+    "static/media/AiMl.png": "/static/media/AiMl.2d4d071531b0b9d9919d.png",
+    "static/media/contactMe.webp": "/static/media/contactMe.fd5dcc5d2792f2a3e8cc.webp",
+    "index.html": "/index.html",
+    "main.a34d19c7.css.map": "/static/css/main.a34d19c7.css.map",
+    "main.e59ceb74.js.map": "/static/js/main.e59ceb74.js.map",
+    "453.258b012d.chunk.js.map": "/static/js/453.258b012d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a34d19c7.css",
+    "static/js/main.e59ceb74.js"
+  ]
+}
