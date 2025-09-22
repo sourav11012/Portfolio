@@ -1,11 +1,62 @@
+
+
+
+
 .project{
     /* padding-left: 130px ; */
-    margin-top: 60px;
+    margin-top: 30px;
     height: auto;
-    height: 130vh;
-    
+    /* height: 300vh; */
+    /* position: fixed; */
+    padding-top: 5vw;
+   
     
 }
+
+.project-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  z-index: 15;
+
+}
+
+.project-card1{
+  position: sticky;
+  top: 10vh;
+
+}
+.project-card2{
+  position: sticky;
+  top: 10vh;
+}
+
+.project-card3{
+  position: sticky;
+  top: 10vh;
+}
+
+.project-card4{
+  position: sticky;
+  top: 0;
+}
+
+.project .P-card{
+  width: 35rem;
+  padding-bottom: 20px;
+
+
+}
+
+
+
+
+/* .section4{
+  position: sticky;
+  top: 0vh;
+} */
 
 .project hr{
     color: rgb(0, 0, 0);
@@ -41,7 +92,7 @@ font-size:14px;
 
 .project .card img{
   
-    height: 200px;
+    height: 300px;
     width: 100%;
 }
 
@@ -133,15 +184,16 @@ background-color: #420039;
       margin-bottom: 70rem;
       margin-top: 50px;
       padding-left: 0; /* Remove padding for smaller devices */
+      height: 180vh;
     }
 
     .project hr {
       width: 280px;
     }
 
-    .project .card {
+    .project .P-card {
       margin-top: 30px;
-      width: 100%; /* Ensure cards take full width on small screens */
+      width: 90%; /* Ensure cards take full width on small screens */
     }
 
     /* You can also try to use grid or flexbox for better alignment */
@@ -151,13 +203,27 @@ background-color: #420039;
       justify-content: center;
     }
 }
+@media (max-width: 390px) {
+  .project .P-card {
+    margin-top: 20px;
+    width: 85%; /* Adjust to ensure cards take most of the screen width */
+  }
 
+  .project hr {
+    width: 220px;
+  }
+
+  .project .card img {
+    height: 200px;
+    width: 100%;
+  }
+}
 
   /* ======== */
   /* =========================== */
 /* Updated Dark Mode for Project Cards */
 #dark .project .card {
-  background-color: #000000; /* Darker background for the card */
+  background-color: #171717; /* Darker background for the card */
   color: #f5f5f5; /* Light text color for readability */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for elegance */
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 6px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;

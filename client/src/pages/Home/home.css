@@ -8,11 +8,19 @@
    
     
 }
+
+/* .section1{
+  position: sticky;
+  top: 5vw;
+} */
 .home-content{
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 0px;
+}
+.header-name{
+  display: block;
 }
 
 .home-content p{
@@ -84,7 +92,7 @@ margin-left: 15px;
     background-color: #1e1e1e;
     position: fixed;
     margin-top: 50px;
-    z-index: 1;
+    z-index: 100;
 
 }
 
@@ -108,6 +116,14 @@ margin-left: 15px;
     }
     .home-content h1 {
       font-size: 24px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .home-content h1{
+     
+      justify-content: center;
+      
     }
   }
 

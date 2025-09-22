@@ -1,5 +1,5 @@
 import { BsFiletypeHtml, BsFiletypeCss, BsBootstrap } from "react-icons/bs";
-import { FaNodeJs, FaAndroid, FaJava } from "react-icons/fa";
+import { FaNodeJs, FaAndroid, FaJava, FaPython } from "react-icons/fa";
 import {
   SiJavascript,
   SiReact,
@@ -15,9 +15,18 @@ import {
   SiExpress,
   SiNginx,
   SiAngular,
+  SiTensorflow,
+  SiPytorch,
+  SiKeras,
+  SiScikitlearn,
+  SiDjango,
+  SiFlask,
+  SiFastapi,
+  SiSpring,
+  SiSpringboot,
 } from "react-icons/si";
-
 import { FaAws } from "react-icons/fa";
+
 export const TechstackList = [
   {
     _id: 1,
@@ -62,66 +71,105 @@ export const TechstackList = [
     class: "React",
   },
   {
-    _id: 7,
+    _id: 8,
     name: "Android Dev",
     icon: FaAndroid,
     class: "Android",
   },
-
   {
-    _id: 13,
-    name: "Java ",
+    _id: 9,
+    name: "Java",
     icon: FaJava,
     class: "Java",
   },
-
   {
-    _id: 15,
-    name: "Node JS ",
+    _id: 10,
+    name: "Python",
+    icon: FaPython,
+    class: "Python",
+  },
+  {
+    _id: 11,
+    name: "Node JS",
     icon: FaNodeJs,
     class: "NodeJs",
   },
   {
-    _id: 16,
-    name: "Express JS ",
+    _id: 12,
+    name: "Express JS",
     icon: SiExpress,
     class: "Express",
   },
-
   {
-    _id: 18,
-    name: "MongoDB ",
+    _id: 13,
+    name: "MongoDB",
     icon: SiMongodb,
     class: "MongoDB",
   },
   {
-    _id: 19,
-    name: "SQL ",
+    _id: 14,
+    name: "SQL",
     icon: SiMysql,
     class: "SQL",
   },
   {
-    _id: 20,
-    name: "Firebase ",
+    _id: 15,
+    name: "Firebase",
     icon: SiFirebase,
     class: "Firebase",
   },
   {
-    _id: 21,
-    name: "Git / Github ",
+    _id: 16,
+    name: "Git / Github",
     icon: SiGithub,
     class: "GitHub",
   },
   {
-    _id: 22,
-    name: "Docker ",
+    _id: 17,
+    name: "Docker",
     icon: SiDocker,
     class: "Docker",
   },
   {
-    _id: 23,
-    name: "AWS ",
+    _id: 18,
+    name: "AWS",
     icon: FaAws,
     class: "AWS",
+  },
+  {
+    _id: 19,
+    name: "TensorFlow",
+    icon: SiTensorflow,
+    class: "TensorFlow",
+  },
+  {
+    _id: 20,
+    name: "PyTorch",
+    icon: SiPytorch,
+    class: "PyTorch",
+  },
+  {
+    _id: 21,
+    name: "Keras",
+    icon: SiKeras,
+    class: "Keras",
+  },
+  {
+    _id: 22,
+    name: "Scikit-learn",
+    icon: SiScikitlearn,
+    class: "ScikitLearn",
+  },
+  {
+    _id: 23,
+    name: "Spring Boot",
+    icon: SiSpringboot,
+    class: "SpringBoot",
+  },
+  {
+    _id: 24,
+    name: "Flask",
+    icon: SiFlask,
+    class: "Flask",
   },
 ];

@@ -2,10 +2,11 @@ import React from "react";
 import "./Techstack.css";
 import Fade from "react-reveal";
 import { TechstackList } from "../../utils/TechstackList";
+
 const Techstack = () => {
   return (
     <>
-      <div className="container techstack" id="techsatck">
+      <div className="container techstack section3" id="techsatck">
         <h2 className="col-12 mt-3 mb-1 text-center">TECHNOLOGIES</h2>
         <hr />
         <p className="pb-3 text-center">

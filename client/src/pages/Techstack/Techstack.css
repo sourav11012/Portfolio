@@ -54,75 +54,84 @@
   }
   
   .techstack .HTML:hover {
-    background-size: 80% 100%; /* Adjust the percentage as needed */
+    background-size: 90% 100%; /* Adjust the percentage as needed */
   }
   .techstack .CSS:hover {
-    background-size: 80% 100%; /* Adjust the percentage as needed */
+    background-size: 90% 100%; /* Adjust the percentage as needed */
   }
   .techstack .Bootstrap:hover {
-    background-size: 70% 100%; /* Adjust the percentage as needed */
+    background-size: 85% 100%; /* Adjust the percentage as needed */
   }
   .techstack .React:hover {
-    background-size: 75% 100%; /* Adjust the percentage as needed */
+    background-size: 85% 100%; /* Adjust the percentage as needed */
   }
   .techstack .JavaScript:hover {
-    background-size: 80% 100%; /* Adjust the percentage as needed */
+    background-size: 95% 100%; /* Adjust the percentage as needed */
   }
   .techstack .TypeScript:hover {
-    background-size: 80% 100%; /* Adjust the percentage as needed */
+    background-size: 90% 100%; /* Adjust the percentage as needed */
   }
   .techstack .Docker:hover {
-    background-size: 20% 100%; /* Adjust the percentage as needed */
+    background-size: 60% 100%; /* Adjust the percentage as needed */
   }
   .techstack .AWS:hover {
-    background-size: 20% 100%; /* Adjust the percentage as needed */
-  }
-  .techstack .Firebase:hover {
-    background-size: 60% 100%; /* Adjust the percentage as needed */
-  }
-  .techstack .GitHub:hover {
-    background-size: 65% 100%; /* Adjust the percentage as needed */
-  }
-  .techstack .SQL:hover {
-    background-size: 60% 100%; /* Adjust the percentage as needed */
-  }
-  .techstack .Angular:hover {
-    background-size: 40% 100%; /* Adjust the percentage as needed */
-  }
-  .techstack .Android:hover {
-    background-size: 55% 100%; /* Adjust the percentage as needed */
-  }
-  .techstack .Java:hover {
     background-size: 70% 100%; /* Adjust the percentage as needed */
   }
+  .techstack .Firebase:hover {
+    background-size: 80% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .GitHub:hover {
+    background-size: 85% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .SQL:hover {
+    background-size: 80% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Angular:hover {
+    background-size: 60% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Android:hover {
+    background-size: 85% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Java:hover {
+    background-size: 95% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .Python:hover{
+    background-size: 95% 100%;
+  }
   .techstack .MongoDB:hover {
-    background-size: 65% 100%; /* Adjust the percentage as needed */
+    background-size: 90% 100%; /* Adjust the percentage as needed */
   }
   .techstack .Express:hover {
-    background-size: 75% 100%; /* Adjust the percentage as needed */
+    background-size: 90% 100%; /* Adjust the percentage as needed */
   }
   .techstack .NodeJs:hover {
+    background-size: 90% 100%; /* Adjust the percentage as needed */
+  }
+  .techstack .SpringBoot:hover {
     background-size: 75% 100%; /* Adjust the percentage as needed */
-  }
-/* HTML: <div class="loader"></div> */
-/* .techstack .card:hover {
-    width: 285px;
-    height: 65px;
-    background:
-     linear-gradient(#39a27c 0 0) 0/0% no-repeat
-     #ddd;
-    animation: l1 2s infinite linear;
-  }
-  @keyframes l1 {
-      100% {background-size:100%}
-  } */
+}
+.techstack .Flask:hover {
+    background-size: 75% 100%; /* Adjust the percentage as needed */
+}
+.techstack .TensorFlow:hover {
+    background-size: 70% 100%; /* Adjust the percentage as needed */
+}
+.techstack .PyTorch:hover {
+    background-size: 70% 100%; /* Adjust the percentage as needed */
+}
+.techstack .Keras:hover {
+    background-size: 65% 100%; /* Adjust the percentage as needed */
+}
+.techstack .ScikitLearn:hover {
+    background-size: 60% 100%; /* Adjust the percentage as needed */
+}
+
 
 /* ======= DARK ======= */
 #dark .techstack .card{
    
     background: #2d2d44;
-    /* box-shadow: rgb(255, 255, 255) 3px 3px 6px 0px inset, 
-    rgba(240, 240, 240, 0.5) -3px -3px 6px 1px inset; */
+    color: #ffffff;
     cursor: pointer;
    
 
@@ -130,6 +139,7 @@
     background-image: linear-gradient(#ffffff 0 0);
     background-repeat: no-repeat;
     background-size: 0% 100%;
+    box-shadow: rgba(222, 227, 236, 0.316) 1px 1px 2px 0px inset, rgba(255, 255, 255, 0.262) 1px 1px 2px 0px inset;
     
     
     
@@ -140,9 +150,7 @@
 }
 
 #dark .techstack .HTML:hover {
-    background-size: 80% 100%; /* Adjust the percentage as needed */
-    
-    
+    background-size: 80% 100%; /* Adjust the percentage as needed */   
   }
 
 #dark .techstack .CSS:hover {
@@ -161,10 +169,10 @@
   background-size: 80% 100%; /* Adjust the percentage as needed */
 }
 #dark .techstack .Docker:hover {
-  background-size: 20% 100%; /* Adjust the percentage as needed */
+  background-size: 80% 100%; /* Adjust the percentage as needed */
 }
 #dark .techstack .AWS:hover {
-  background-size: 20% 100%; /* Adjust the percentage as needed */
+  background-size: 60% 100%; /* Adjust the percentage as needed */
 }
 #dark .techstack .Firebase:hover {
   background-size: 60% 100%; /* Adjust the percentage as needed */
@@ -184,6 +192,9 @@
 #dark .techstack .Java:hover {
   background-size: 70% 100%; /* Adjust the percentage as needed */
 }
+#dark  .techstack .Python:hover{
+  background-size: 95% 100%;
+}
 #dark .techstack .MongoDB:hover {
   background-size: 65% 100%; /* Adjust the percentage as needed */
 }
@@ -193,6 +204,28 @@
 #dark .techstack .NodeJs:hover {
   background-size: 75% 100%; /* Adjust the percentage as needed */
 }
+#dark .techstack .SpringBoot:hover {
+  background-size: 70% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Flask:hover {
+  background-size: 75% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .FastAPI:hover {
+  background-size: 65% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .TensorFlow:hover {
+  background-size: 55% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .PyTorch:hover {
+  background-size: 60% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .Keras:hover {
+  background-size: 65% 100%; /* Adjust the percentage as needed */
+}
+#dark .techstack .ScikitLearn:hover {
+  background-size: 70% 100%; /* Adjust the percentage as needed */
+}
+
 
 
 #dark .techstack h2{

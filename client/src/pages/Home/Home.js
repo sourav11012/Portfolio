@@ -10,7 +10,15 @@ const Home = () => {
   const [theme, setTheme] = useTheme();
   //handle theme
   const handleTheme = () => {
-    setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
+    // setTheme((prevState) => (prevState === "light" ? ("dark") : "light"));
+    const selectedTheme = localStorage.getItem("theme");
+    if (selectedTheme === "light") {
+      setTheme("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      setTheme("light");
+      localStorage.setItem("theme", "light");
+    }
   };
   return (
     <>
@@ -24,9 +32,11 @@ const Home = () => {
         </div>
         <div className="container home-content">
           <Fade right>
-            <h1>
-              <b>HEY! 👋 I'M SOURAV SHRIKANT SHETYE</b>
-            </h1>
+            <div className="header_name">
+              <h1>
+                <b>SOURAV SHRIKANT SHETYE</b>
+              </h1>
+            </div>
             <p>
               <Typewriter
                 options={{

@@ -5,6 +5,13 @@
   background-color: rgba(128, 128, 128, 0.101);
 }
 
+/* .section2{
+  position: sticky;
+  top: -40vh;
+} */
+
+
+
 .education hr {
   color: #138781;
   width: 25rem;

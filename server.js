@@ -13,9 +13,6 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 8080;
 
-// app.get("/", (req, res) => {
-//   res.send("Helloooo");
-// });
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 

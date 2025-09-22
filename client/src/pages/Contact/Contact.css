@@ -2,7 +2,13 @@
   margin-top: 60px;
   padding: 20px 0; /* Adding padding to create space */
   clear: both; /* Ensure this section clears any floating elements */
+  padding-bottom: 20vh;
 }
+
+/* .section5{
+  position: sticky;
+  top:15vh;
+} */
 
   .contact-header{
     height: 4rem;
@@ -174,5 +180,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    .form-input{
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 390px) {
+   
+    .form-input{
+      padding: 0;
+      margin: 0;
     }
   }
