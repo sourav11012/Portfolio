@@ -26,6 +26,8 @@ jobs:
           cd client
           npm install --legacy-peer-deps
           npm run build
+        env:
+          CI: false
 
       # 4️⃣ Copy React build folder to EC2 using rsync
       - name: Deploy React build via rsync
