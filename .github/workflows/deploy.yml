@@ -29,12 +29,18 @@ jobs:
         env:
           CI: false
 
-      # 4️⃣ Copy React build folder to EC2 using rsync
+      # 4️⃣ Setup SSH key into a temp file
+      - name: Setup SSH key
+        run: |
+          echo "${{ secrets.EC2_SSH_KEY }}" > private_key.pem
+          chmod 600 private_key.pem
+
+      # 5️⃣ Copy React build folder to EC2 using rsync
       - name: Deploy React build via rsync
         run: |
-          rsync -avz --delete --exclude 'node_modules' --exclude '.cache' -e "ssh -i ${{ secrets.EC2_SSH_KEY }} -o StrictHostKeyChecking=no" client/build/ ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:~/app/client/build/
+          rsync -avz --delete --exclude 'node_modules' --exclude '.cache' -e "ssh -i private_key.pem -o StrictHostKeyChecking=no" client/build/ ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:~/app/client/build/
 
-      # 5️⃣ Install backend deps & restart Node app
+      # 6️⃣ Install backend deps & restart Node app
       - name: Deploy backend and restart PM2
         uses: appleboy/ssh-action@master
         with:
