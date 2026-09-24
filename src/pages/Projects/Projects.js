@@ -1,20 +1,18 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
+import { FiArrowUpRight } from "react-icons/fi";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import Ecommerce from "../../assets/images/Ecommerce.webp";
 import MLImage from "../../assets/images/AiMl.png";
 import Imaginify from "../../assets/images/Imaginify.webp";
 import InsightImg from "../../assets/images/insight.svg";
 import ForesightImg from "../../assets/images/foresight.svg";
 import "./Projects.css";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Insight: Enterprise RAG Q&A",
-    badge: "AI / RAG",
+    title: "Insight — Enterprise RAG Q&A",
+    badge: "AI · RAG",
     image: InsightImg,
     alt: "Insight RAG platform",
     tags: ["Azure OpenAI", "Semantic Kernel", "RAG"],
@@ -23,8 +21,8 @@ const projects = [
     link: "https://github.com/sourav11012",
   },
   {
-    title: "Foresight: Vision LLM Pipeline",
-    badge: "AI / Vision",
+    title: "Foresight — Vision LLM Pipeline",
+    badge: "AI · Vision",
     image: ForesightImg,
     alt: "Foresight vision pipeline",
     tags: ["YOLO", "Custom Vision", "Azure OpenAI"],
@@ -33,8 +31,8 @@ const projects = [
     link: "https://github.com/sourav11012",
   },
   {
-    title: "Imaginify: AI SaaS Platform",
-    badge: "AI / SaaS",
+    title: "Imaginify — AI SaaS Platform",
+    badge: "AI · SaaS",
     image: Imaginify,
     alt: "Imaginify AI SaaS",
     tags: ["Next.js", "TypeScript", "Cloudinary"],
@@ -43,8 +41,8 @@ const projects = [
     link: "https://aisaas-pied.vercel.app/",
   },
   {
-    title: "Wave2Lip: Real Time",
-    badge: "AI / ML",
+    title: "Wave2Lip — Real Time",
+    badge: "AI · ML",
     image: MLImage,
     alt: "Wave2Lip project",
     tags: ["Python", "PyTorch", "Real-time"],
@@ -65,74 +63,49 @@ const projects = [
 ];
 
 const Projects = () => {
-  useEffect(() => {
-    const isMobile = window.matchMedia("(max-width: 390px)").matches;
-
-    gsap.utils.toArray(".P-card").forEach((card) => {
-      gsap.to(card, {
-        scale: isMobile ? 0.9 : 0.8,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: card,
-          start: "top 10%",
-          end: "bottom 15%",
-          scrub: true,
-        },
-      });
-    });
-
-    // Cleanup
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
   return (
-    <>
-      <div className="project-background" id="project-background">
-        <div className="container project" id="project">
-          <h2 className="col-12 mt-3 mb-1 text-center">Projects</h2>
-          <hr />
-          <p className="pb-3 text-center">
-            AI systems and full-stack builds — selected work with source code
-            and live demos
-          </p>
-          <div className="project-container" id="ads">
-            {projects.map((p, i) => (
-              <div className={`col-md-4 P-card project-card${i}`} key={p.title}>
-                <div className="card rounded card-color">
-                  <div className="card-image">
-                    <span className="card-notify-badge">{p.badge}</span>
-                    <img src={p.image} alt={p.alt} loading="lazy" />
-                  </div>
-                  <div className="card-image-overly m-auto mt-3 ">
+    <section className="section hairline-top" id="project">
+      <div className="wrap">
+        <SectionHeading
+          index="03"
+          eyebrow="Selected Projects"
+          title="Work that speaks for itself."
+          lede="AI systems and full-stack builds — selected work with source code and live demos."
+        />
+        <div className="project-index">
+          {projects.map((p, i) => (
+            <Fade direction="up" triggerOnce key={p.title}>
+              <a
+                className="project-row"
+                href={p.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="project-num">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="project-main">
+                  <span className="project-badge">{p.badge}</span>
+                  <h3 className="font-display">{p.title}</h3>
+                  <p>{p.description}</p>
+                  <span className="project-tags">
                     {p.tags.map((t) => (
-                      <span className="card-details-badge mb-3" key={t}>
-                        {t}
-                      </span>
+                      <span key={t}>{t}</span>
                     ))}
-                  </div>
-                  <div className="card-body text-center">
-                    <div className="ad-title m-auto">
-                      <h5 className="text-uppercase">{p.title}</h5>
-                    </div>
-                    <p className="project-desc">{p.description}</p>
-                    <a
-                      className="ad-btn"
-                      href={p.link}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      View
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                  </span>
+                </span>
+                <span className="project-visual">
+                  <img src={p.image} alt={p.alt} loading="lazy" />
+                </span>
+                <span className="project-link" aria-hidden="true">
+                  <FiArrowUpRight size={22} />
+                </span>
+              </a>
+            </Fade>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

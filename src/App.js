@@ -1,4 +1,5 @@
-import Layout from "./components/Layout/Layout";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Education from "./pages/Education/Education";
@@ -7,45 +8,31 @@ import ScrollToTop from "react-scroll-to-top";
 import Projects from "./pages/Projects/Projects";
 import Techstack from "./pages/Techstack/Techstack";
 import AIWork from "./pages/AIWork/AIWork";
-import { useTheme } from "./context/ThemeContext";
-import MobileNav from "./components/MobileNav/MobileNav";
 import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
 
 function App() {
-  const [theme] = useTheme();
-
   return (
-    <div>
-      <div id={theme} className="background">
-        <ToastContainer />
-        <MobileNav />
-        <Layout />
-        <div className="container">
-          <About />
-
-          <Education />
-
-          <Techstack />
-
-          <AIWork />
-
-          <Projects />
-
-          <Contact />
-        </div>
-        <Footer />
-        {/* <div className="footer pb-3 ms-3">
-        
-          <h4 className="text-center">Sourav Shetye &copy; 2024</h4>
-          
-        </div> */}
-      </div>
+    <div className="app-shell">
+      <ToastContainer position="bottom-right" />
+      <Navbar />
+      <main>
+        <Home />
+        <About />
+        <AIWork />
+        <Projects />
+        <Techstack />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
       <ScrollToTop
         smooth
-        color="#f29f67"
-        style={{ backgroundColor: "#1e1e2c", borderRadius: "80px" }}
+        className="scroll-to-top-btn"
+        color="#faf7f1"
+        style={{ borderRadius: "50%" }}
       />
     </div>
   );

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import { useTheme } from "../../context/ThemeContext";
-import { BsGithub, BsLinkedin, BsEnvelope } from "react-icons/bs";
-import "./Contac1.css";
+import { Fade } from "react-awesome-reveal";
+import { FiArrowUpRight, FiSend } from "react-icons/fi";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import "./Contact.css";
 
 const EMAIL = "souravshetye@gmail.com";
 
@@ -10,7 +11,6 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
-  const [theme] = useTheme();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,76 +24,84 @@ const Contact = () => {
     toast.success("Opening your email client…");
   };
 
-  const iconColor = theme === "light" ? "black" : "white";
-
   return (
-    <div className="contact section5" id="contacts">
-      <div className="contact-header text-center">
-        <h2>
-          <b>Contact Me</b>
-        </h2>
-        <hr />
-      </div>
-      <div className="card card2 d-flex card border-0 px-4 py-5 mx-auto">
-        <div className="row">
-          <h6>
-            Contact With
-            <a
-              href="https://www.linkedin.com/in/souravshetye/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BsLinkedin color={iconColor} size={30} className="ms-2" />
-            </a>
-            <a
-              href="https://github.com/sourav11012"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BsGithub color={iconColor} size={30} className="ms-2" />
-            </a>
-            <a href={`mailto:${EMAIL}`}>
-              <BsEnvelope color={iconColor} size={30} className="ms-2" />
-            </a>
-          </h6>
-          <p className="text-center contact-note">
-            Prefer email? Reach me directly at{" "}
-            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+    <section className="contact-section" id="contacts">
+      <div className="wrap">
+        <Fade direction="up" triggerOnce>
+          <p className="eyebrow eyebrow-dark">
+            <span className="rule" />
+            06 — Contact
           </p>
-          <div className="form-input">
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+          <h2 className="font-display contact-title">
+            Let&rsquo;s build something <em>intelligent</em>.
+          </h2>
+          <p className="contact-lede">
+            I&rsquo;m always glad to talk about LLM systems, RAG, or new
+            opportunities. The fastest way to reach me is email.
+          </p>
+          <div className="contact-actions">
+            <a className="btn-paper" href={`mailto:${EMAIL}`}>
+              {EMAIL} <FiArrowUpRight size={15} />
+            </a>
+            <div className="contact-socials">
+              <a
+                href="https://www.linkedin.com/in/souravshetye/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <BsLinkedin size={20} />
+              </a>
+              <a
+                href="https://github.com/sourav11012"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <BsGithub size={20} />
+              </a>
+            </div>
           </div>
-          <div className="form-input">
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Your Email Address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="form-input">
-            <textarea
-              name="msg"
-              placeholder="Write your message"
-              value={msg}
-              onChange={(e) => setMsg(e.target.value)}
-            />
-          </div>
-          <div className="form-input">
-            <button className="button" onClick={handleSubmit}>
-              SEND MESSAGE
+        </Fade>
+
+        <Fade direction="up" triggerOnce>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <label>
+                <span>Name</span>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </label>
+              <label>
+                <span>Email</span>
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </label>
+            </div>
+            <label>
+              <span>Message</span>
+              <textarea
+                rows={4}
+                placeholder="Tell me about your project or role…"
+                value={msg}
+                onChange={(e) => setMsg(e.target.value)}
+              />
+            </label>
+            <button type="submit" className="btn-paper form-submit">
+              Send message <FiSend size={15} />
             </button>
-          </div>
-        </div>
+          </form>
+        </Fade>
       </div>
-    </div>
+    </section>
   );
 };
 

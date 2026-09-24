@@ -1,295 +1,118 @@
-
-
-
-
-.project{
-    /* padding-left: 130px ; */
-    margin-top: 30px;
-    height: auto;
-    /* height: 300vh; */
-    /* position: fixed; */
-    padding-top: 5vw;
-   
-    
+.project-index {
+  border-top: 1px solid var(--line);
 }
 
-.project-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.project-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 190px 48px;
+  gap: 28px;
   align-items: center;
-  height: auto;
-  z-index: 15;
-
+  padding: 38px 12px;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.3s ease, padding 0.3s ease;
 }
 
-.project-card1{
-  position: sticky;
-  top: 10vh;
-
-}
-.project-card2{
-  position: sticky;
-  top: 10vh;
+.project-row:hover {
+  background: var(--card);
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
-.project-card3{
-  position: sticky;
-  top: 10vh;
+.project-num {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--muted);
 }
 
-.project-card4{
-  position: sticky;
-  top: 0;
+.project-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  border: 1px solid var(--line);
+  background: var(--paper-deep);
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 14px;
 }
 
-.project .P-card{
-  width: 35rem;
-  padding-bottom: 20px;
-
-
+.project-main h3 {
+  font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+  margin: 0 0 10px;
+  color: var(--ink);
 }
 
-
-
-
-/* .section4{
-  position: sticky;
-  top: 0vh;
-} */
-
-.project hr{
-    color: rgb(0, 0, 0);
-    width: 400px;
-    margin: 10px auto;
+.project-main p {
+  margin: 0 0 14px;
+  color: var(--ink-2);
+  font-size: 0.98rem;
+  max-width: 56ch;
 }
 
-.project h2{
-    font-weight: bold;
-}
-.project p{
-  color: #000000;
-}
-
-#ads{
-    margin: 30px 0px 30px 0px;
-
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
 }
 
-#ads .card-notify-badge{
-    position:absolute;
-    left:-10px;
-    top:-20px;
-    background: 
-    #30b3cd;
-    
-text-align: center;
-border-radius: 30px 30px 30px 30px;
-color:rgb(255, 255, 255);
-padding:5px 10px;
-font-size:14px;
+.project-tags span {
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
-.project .card img{
-  
-    height: 300px;
-    width: 100%;
+.project-visual {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--paper-deep);
+  aspect-ratio: 4 / 3;
 }
 
-
-.card-details-badge{
-    background-color: #149cac;
-    text-align: center;
-    border-radius: 30px 30px 30px 30px;
-    padding: 5px 10px ;
-    font-size: 14px;
-    color: black;
-
-}
-.card-image-overly{
-    font-size: 2px;
-}
-.card-image-overly span{
-    display: inline-block;
-    margin-left: 5px;
-    color: white;
-
-}
-.ad-btn{
-    text-transform:  uppercase;
-    width: 150px;
-    height:40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #138781;
-    color: rgb(255, 255, 255);
-    border-radius: 80px;
-    font-size:16px;
-    line-height: 15px;
-    text-decoration:none;
-    margin: 20px auto 20px auto ;
-    overflow: hidden;
-    position: relative;
-}
-.ad-btn:hover{
-    background-color: white;
-    color: rgb(6, 55, 38);
-    background: transparent;
-    border: 2px solid #138781;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+.project-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.project .card{
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-row:hover .project-visual img {
+  transform: scale(1.05);
 }
 
-.project .card:hover{
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-    transform: translateY(-3px);
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-
-/* =========================== */
-/* #dark .project .card{
-  background-color: #e2d7fc;
+.project-row:hover .project-link {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+  transform: translate(3px, -3px);
 }
 
-#dark .ad-btn{
-background-color: #420039;
-}
-#dark .ad-btn:hover{
-  background-color: #f6f2ff;
-  border: 2px solid #420039;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-
-}
-
-#dark .card-details-badge{
-  background-color: #932F6D;
-}
-
-#dark .card-notify-badge{
-  background-color: #E07BE0;
-} */
-
-
-  /* =============================== */
-  @media (max-width: 600px) {
-    .project {
-      margin: 0;
-      padding: 0;
-      margin-bottom: 70rem;
-      margin-top: 50px;
-      padding-left: 0; /* Remove padding for smaller devices */
-      height: 180vh;
-    }
-
-    .project hr {
-      width: 280px;
-    }
-
-    .project .P-card {
-      margin-top: 30px;
-      width: 90%; /* Ensure cards take full width on small screens */
-    }
-
-    /* You can also try to use grid or flexbox for better alignment */
-    .project {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-}
-@media (max-width: 390px) {
-  .project .P-card {
-    margin-top: 20px;
-    width: 85%; /* Adjust to ensure cards take most of the screen width */
+@media (max-width: 860px) {
+  .project-row {
+    grid-template-columns: 44px 1fr 40px;
+    gap: 18px;
+    padding: 30px 4px;
   }
-
-  .project hr {
-    width: 220px;
-  }
-
-  .project .card img {
-    height: 200px;
-    width: 100%;
-  }
-}
-
-  /* ======== */
-  /* =========================== */
-/* Updated Dark Mode for Project Cards */
-#dark .project .card {
-  background-color: #171717; /* Darker background for the card */
-  color: #f5f5f5; /* Light text color for readability */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for elegance */
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 6px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-}
-
-#dark .project h2{
-  color: white;
-}
-
-#dark .project p{
-  color: #f4f4f4;
-}
-
-#dark .project .card:hover {
-  background-color: #3e3e63; /* Lighter shade on hover */
-  transform: translateY(-5px); /* Slight elevation on hover */
-}
-
-#dark .ad-btn {
-  background-color: #2d2d44; /* Dark button background */
-  color: #f7f2fc; /* Text color */
-  border: 2px solid transparent;
-  transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-}
-
-#dark .ad-btn:hover {
-  background-color: #f6f2ff; /* Softer hover background */
-  color: #231e23; /* Text color changes on hover */
-  border: 2px solid #211e21;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 6px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-}
-
-#dark .card-details-badge {
-  background-color: #cacaca; /* More professional dark purple */
-  color: rgb(2, 2, 2); /* Maintain contrast with white text */
-}
-
-#dark .card-notify-badge {
-  background-color: #cacaca; /* Bright accent color for notifications */
-  color: #000000; /* White text */
-}
-
-/* =============================== */
-
-/* Project card descriptions */
-.project-desc {
-  font-size: 14px;
-  line-height: 1.55;
-  color: #3a3a3a;
-  padding: 4px 14px 10px;
-  margin: 0;
-}
-#dark .project-desc {
-  color: #d8d8e6;
-}
-
-/* Make project cards responsive on small screens */
-@media (max-width: 768px) {
-  .project .P-card {
-    width: 100%;
-    max-width: 35rem;
-  }
-  .project .card img {
-    height: auto;
-    max-height: 240px;
-    object-fit: cover;
+  .project-visual {
+    display: none;
   }
 }

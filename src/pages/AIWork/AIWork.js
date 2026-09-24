@@ -1,8 +1,9 @@
 import React from "react";
-import "./AIWork.css";
 import { Fade } from "react-awesome-reveal";
-import { SiOpenai, SiMicrosoftazure } from "react-icons/si";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import { SiOpenai } from "react-icons/si";
 import { BsCpu, BsDatabaseCheck } from "react-icons/bs";
+import "./AIWork.css";
 
 const items = [
   {
@@ -24,35 +25,32 @@ const items = [
 
 const AIWork = () => {
   return (
-    <>
-      <div className="container aiwork" id="aiwork">
-        <h2 className="col-12 mt-3 mb-1 text-center">AI WORK</h2>
-        <hr />
-        <p className="pb-3 text-center">
-          What I ship as an AI Engineer at BCD iLabs — production LLM systems,
-          not demos
-        </p>
+    <section className="section hairline-top aiwork-section" id="aiwork">
+      <div className="wrap">
+        <SectionHeading
+          index="02"
+          eyebrow="AI Work"
+          title="Production LLM systems, not demos."
+          lede="What I ship as an AI Engineer at BCD iLabs — systems running in enterprise environments, held to enterprise standards."
+        />
         <Fade direction="up" triggerOnce cascade damping={0.12}>
           <div className="row aiwork-grid">
-            {items.map((item) => (
+            {items.map((item, i) => (
               <div className="col-md-4" key={item.title}>
-                <div className="card aiwork-card m-2">
-                  <div className="card-body text-center">
-                    <item.icon className="aiwork-icon" />
-                    <h5>{item.title}</h5>
-                    <p>{item.text}</p>
-                  </div>
-                </div>
+                <article className="aiwork-item">
+                  <span className="aiwork-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="aiwork-icon">
+                    <item.icon size={22} />
+                  </span>
+                  <h3 className="font-display">{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
               </div>
             ))}
           </div>
         </Fade>
-        <p className="text-center aiwork-foot">
-          <SiMicrosoftazure className="me-1" />
-          Azure AI Foundry · Azure OpenAI · Semantic Kernel · AKS
-        </p>
       </div>
-    </>
+    </section>
   );
 };
 

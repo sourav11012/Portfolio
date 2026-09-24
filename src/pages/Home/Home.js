@@ -1,78 +1,62 @@
 import React from "react";
-import { useTheme } from "../../context/ThemeContext";
-import Typewriter from "typewriter-effect";
-import Resume from "../../assets/docs/Sourav_Shetye_Resume.pdf";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import "./home.css";
+import { Link } from "react-scroll";
+import { FiArrowDown, FiArrowUpRight } from "react-icons/fi";
 import { Fade } from "react-awesome-reveal";
+import "./home.css";
 
 const Home = () => {
-  const [theme, setTheme] = useTheme();
-  //handle theme
-  const handleTheme = () => {
-    // setTheme((prevState) => (prevState === "light" ? ("dark") : "light"));
-    const selectedTheme = localStorage.getItem("theme");
-    if (selectedTheme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-    }
-  };
   return (
-    <>
-      <div className="container-fluid home-container" id="home">
-        <div className="theme-btn" onClick={handleTheme}>
-          {theme === "light" ? (
-            <BsFillMoonStarsFill size={30} />
-          ) : (
-            <BsFillSunFill size={30} />
-          )}
-        </div>
-        <div className="container home-content">
-          <Fade direction="right" triggerOnce>
-            <div className="header_name">
-              <h1>
-                <b>SOURAV SHRIKANT SHETYE</b>
-              </h1>
+    <section className="hero" id="home">
+      <div className="wrap hero-inner">
+        <Fade direction="up" triggerOnce>
+          <p className="eyebrow hero-eyebrow">
+            <span className="rule" />
+            AI Engineer — Chicago, IL
+          </p>
+          <h1 className="font-display hero-name">
+            Sourav Shetye
+          </h1>
+          <p className="font-display hero-statement">
+            I build <em>production LLM systems</em> — RAG pipelines, agentic
+            workflows, and vision models on Azure, trusted by enterprise teams.
+          </p>
+          <div className="hero-actions">
+            <Link
+              to="project"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={600}
+              className="btn-ink"
+            >
+              View selected work <FiArrowDown size={15} />
+            </Link>
+            <a
+              className="btn-ghost"
+              href="mailto:souravshetye@gmail.com"
+            >
+              souravshetye@gmail.com <FiArrowUpRight size={15} />
+            </a>
+          </div>
+        </Fade>
+        <Fade direction="up" delay={200} triggerOnce>
+          <dl className="hero-facts">
+            <div className="hero-fact">
+              <dt>Experience</dt>
+              <dd>4+ years shipping AI &amp; backend systems</dd>
             </div>
-            <p>
-              <Typewriter
-                options={{
-                  strings: [
-                    "AI Engineer !",
-                    "LLM Systems Builder !",
-                    "Full Stack Developer !",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </p>
-          </Fade>
-          <Fade direction="up" triggerOnce>
-            <div className="home-buttons">
-              <a
-                className="btn btn-hire"
-                href="https://api.whatsapp.com/send?phone=9833391942"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Hire Me
-              </a>
-              <a
-                className="btn btn-cv"
-                href={Resume}
-                download="Sourav_Shetye_Resume.pdf"
-              >
-                My Resume
-              </a>
+            <div className="hero-fact">
+              <dt>Platform</dt>
+              <dd>Azure AI Foundry · Azure OpenAI</dd>
             </div>
-          </Fade>
-        </div>
+            <div className="hero-fact">
+              <dt>Focus</dt>
+              <dd>RAG · Agents · Vision LLMs</dd>
+            </div>
+          </dl>
+        </Fade>
       </div>
-    </>
+    </section>
   );
 };
 

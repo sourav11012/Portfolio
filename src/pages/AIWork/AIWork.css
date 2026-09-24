@@ -1,95 +1,66 @@
-.aiwork {
-  margin-top: 60px;
-}
-
-.aiwork hr {
-  color: rgb(0, 0, 0);
-  width: 400px;
-  margin: 10px auto;
-}
-
-.aiwork h2 {
-  font-weight: bold;
-}
-
-.aiwork p {
-  color: #000;
+.aiwork-section {
+  background: var(--paper-deep);
 }
 
 .aiwork-grid {
-  display: flex;
-  justify-content: center;
+  --bs-gutter-x: 0;
 }
 
-.aiwork-card {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: rgb(222, 230, 236) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+.aiwork-item {
+  padding: 12px 36px 12px 0;
   height: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 1px solid var(--line);
+  padding-left: 36px;
 }
 
-.aiwork-card:hover {
-  transform: translateY(-5px);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 14px 28px;
+.aiwork-grid .col-md-4:first-child .aiwork-item {
+  border-left: none;
+  padding-left: 0;
+}
+
+.aiwork-num {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 22px;
 }
 
 .aiwork-icon {
-  font-size: 2.5rem;
-  margin: 10px 0 14px;
-  color: #138781;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--accent-deep);
+  background: var(--card);
+  margin-bottom: 22px;
 }
 
-.aiwork-card h5 {
-  font-weight: 700;
-  margin-bottom: 10px;
+.aiwork-item h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: var(--ink);
 }
 
-.aiwork-card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #3a3a3a;
+.aiwork-item p {
+  font-size: 0.97rem;
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 34ch;
 }
 
-.aiwork-foot {
-  margin-top: 18px;
-  font-size: 14px;
-  color: #555;
-}
-
-#dark .aiwork h2 {
-  color: #ffffff;
-}
-
-#dark .aiwork p {
-  color: #f8f8f8;
-}
-
-#dark .aiwork-card {
-  background: #2d2d44;
-  box-shadow: rgba(222, 227, 236, 0.316) 1px 1px 2px 0px inset,
-    rgba(255, 255, 255, 0.262) 1px 1px 2px 0px inset;
-}
-
-#dark .aiwork-card h5 {
-  color: #ffffff;
-}
-
-#dark .aiwork-card p {
-  color: #d8d8e6;
-}
-
-#dark .aiwork-icon {
-  color: #5eead4;
-}
-
-#dark .aiwork-foot {
-  color: #b9b9d0;
-}
-
-@media (max-width: 768px) {
-  .aiwork-grid {
-    flex-direction: column;
+@media (max-width: 767px) {
+  .aiwork-item {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    padding: 28px 0;
+  }
+  .aiwork-grid .col-md-4:first-child .aiwork-item {
+    border-top: none;
+    padding-top: 0;
   }
 }

@@ -1,166 +1,99 @@
-.home-container{
-    margin-left: 0;
-    height: 100%;
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: top;
-   
-    
+.hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 72px) 0 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* .section1{
-  position: sticky;
-  top: 5vw;
-} */
-.home-content{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px;
-}
-.header-name{
-  display: block;
+/* whisper-soft radial wash for depth */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(640px 420px at 82% 18%, rgba(32, 80, 60, 0.07), transparent 70%),
+    radial-gradient(520px 380px at 12% 82%, rgba(185, 138, 47, 0.06), transparent 70%);
+  pointer-events: none;
 }
 
-.home-content p{
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    color: rgba(0, 0, 0, 0.514);
-    font-size: 25px;
-
-    
-    
-    
-    /* margin-left: 150px; */
-}
-.home-content h1{
-    display: flex;
-    justify-content: center;
-    color: #000000;
-    padding: 5px;
-    max-width: 300rem;
-    /* margin-left: 150px; */
-    
+.hero-inner {
+  position: relative;
+  width: 100%;
 }
 
-.home-buttons{
-    display: flex;
-    justify-content: center;
-    /* margin-left: 150px; */
-    margin-top: 20px;
+.hero-eyebrow {
+  margin-bottom: 26px;
 }
 
-.home-buttons .btn-hire{
-
-background-color: #138781;
-color: white;
-width: 160px;
-}
-.home-buttons .btn-hire:hover{
-    background-color: white;
-    color: #138781;
-    border: 0.5px solid #138781;
-    width: 200px;
-    transition: 0.5s;
+.hero-name {
+  font-size: clamp(3.4rem, 9vw, 7.2rem);
+  color: var(--ink);
+  margin: 0;
 }
 
-.home-buttons .btn-cv{
-    background-color: #138781;
-color: white;
-width: 160px;
-margin-left: 15px;
+.hero-statement {
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.42;
+  color: var(--ink-2);
+  max-width: 640px;
+  margin-top: 26px;
 }
 
-.home-buttons .btn-cv:hover{
-    background-color: white;
-    color: #138781;
-    border: 0.5px solid #138781;
-    width: 200px;
-    transition: 0.5s;
+.hero-statement em {
+  font-style: italic;
+  color: var(--accent-deep);
 }
 
-.theme-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    background-color: #1e1e1e;
-    position: fixed;
-    margin-top: 50px;
-    z-index: 100;
-
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  margin-top: 40px;
 }
 
-@media (max-width:760px) {
-  .home-content h1{
-    justify-content: center;
-    
+.hero-actions .btn-ink,
+.hero-actions .btn-ghost {
+  cursor: pointer;
+}
+
+.hero-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 84px 0 0;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-fact dt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.hero-fact dd {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--nav-h) + 48px);
+    min-height: auto;
   }
-  
+  .hero-facts {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 56px;
+  }
 }
-/* =============== */
-@media (max-width: 600px) {
-    .home-container {
-      padding: 0;
-      margin: 0;
-      margin-top: 20px;
-      width: 100%;
-    }
-    .home-content h2 {
-      font-size: 24px;
-    }
-    .home-content h1 {
-      font-size: 24px;
-    }
-  }
-
-  @media (max-width: 450px) {
-    .home-content h1{
-     
-      justify-content: center;
-      
-    }
-  }
-
-  /* ====Dark Mode */
-  #dark .home-content h1{
- 
-    color: #ffffff;
-    
-    
-}
-#dark .home-content p{
-    
-    color: #ffffff65;
-    
-    
-}
-
-  /* Links and Button Styling in Dark Mode */
-  #dark .home-buttons .btn-cv , #dark .home-buttons .btn-hire{
-    background-color: #1e1e1e; /* Elegant, dark button background */
-    color: #ffffff; /* Button text in soft pastel color */
-    border: none;
-    /* padding: 10px 20px; */
-    font-size: 1rem;
-    
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Slight shadow for button depth */
-    transition: background-color 0.3s ease;
-  }
-  
-  #dark .home-buttons .btn-cv:hover{
-    
-    background-color: #7c7588; 
-    transition: 0.5s;
-  }
-   #dark .home-buttons .btn-hire:hover {
-    background-color: #7c7588; /* Slightly brighter hover state */
-    transition: 0.5s;
-  }
-  

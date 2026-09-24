@@ -1,118 +1,48 @@
-.about {
-  padding: 50px;
-  background-color: #f9f9f9;
-  font-family: 'Arial', sans-serif;
+.about-figure {
+  margin: 0;
+  position: relative;
 }
 
-/* .section1{
-  position: sticky;
-  top:5vh;
-  
-} */
-
-
-
-.about .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.about-img {
-  text-align: center;
-}
-
-.about-img img {
-  width: 350px; /* Set a smaller width */
-  height: 350px; /* Set a smaller height to maintain aspect ratio */
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.about-figure img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--paper-deep);
 }
 
-.about-content {
-  padding: 20px;
-}
-
-.about-content h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: bold;
+.about-figure figcaption {
+  margin-top: 14px;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
   text-align: center;
 }
 
-.about-content p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #666;
-  text-align: justify;
+.about-copy p {
+  color: var(--ink-2);
+  font-size: 1.02rem;
+  margin-bottom: 1.35em;
+  max-width: 60ch;
 }
-  /* ======== DARK MODE ========= */
-  
 
+.about-copy strong {
+  color: var(--ink);
+  font-weight: 600;
+}
 
-  #dark .about {
-    background-color: #121212;
-  }
-  
-  #dark .about-content h1 {
-    color: #ffffff;
-  }
-  
-  #dark .about-content p {
-    color: #bbbbbb;
-  }
-  
-  #dark .about-img img {
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  }
+.about-lead {
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem) !important;
+  line-height: 1.45 !important;
+  color: var(--ink) !important;
+  max-width: 34ch !important;
+}
 
-
-
-
-  
-  /* ================================ */
-
- 
-
-  @media (max-width: 1000px) {
-    .about {
-      flex-direction: column; /* Stack the image and content vertically */
-      margin-left: 0; /* Adjust margin for smaller screens */
-      padding: 0;
-    }
-  
-    .about-img img {
-      max-width: 20rem; /* Let the image fill its container width */
-    }
-  
-    .about-content {
-      padding: 20px; /* Add padding for better spacing */
-    }
-  }
-
-  @media (max-width: 600px) {
-    .about {
-      margin: 0;
-      padding: 0;
-      margin-top: 20px;
-      width: 100%;
-    }
-    .about-content h1 {
-      margin-top: 10px;
-    }
-    .about-img img {
-      max-height: 20rem;
-      max-width: 15rem; /* Decrease image size on smaller screens */
-      border-radius: 3rem; /* Slightly smaller border radius */
-    }
-
-  }
-
-  @media (max-width: 400px) {
-    .about-img img {
-      max-width: 10rem; /* Further decrease image size for very small screens */
-      border-radius: 2rem; 
-    }
-  }
+.about-personal {
+  padding-top: 1.1em;
+  border-top: 1px solid var(--line-soft);
+  color: var(--muted) !important;
+  font-size: 0.95rem !important;
+}

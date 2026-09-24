@@ -1,42 +1,62 @@
 import React from "react";
-import "./About.css";
+import { Fade } from "react-awesome-reveal";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import profilePhoto from "../../assets/images/myPhoto.webp";
+import "./About.css";
 
 const About = () => {
   return (
-    <>
-      <div className="container about section1">
-        <div className="row">
-          <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-img">
-            <img src={profilePhoto} alt="profile pic" loading="lazy" />
+    <section className="section hairline-top" id="about">
+      <div className="wrap">
+        <SectionHeading
+          index="01"
+          eyebrow="About"
+          title="Engineer with a product sense."
+          lede="I care about the details users feel and the systems they never see — from prompt design to pipeline reliability."
+        />
+        <div className="row g-5 align-items-start">
+          <div className="col-lg-5">
+            <Fade direction="left" triggerOnce>
+              <figure className="about-figure">
+                <img src={profilePhoto} alt="Portrait of Sourav Shetye" loading="lazy" />
+                <figcaption>
+                  Sourav Shetye — Chicago, Illinois
+                </figcaption>
+              </figure>
+            </Fade>
           </div>
-          <div className="col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content">
-            <h1>About me</h1>
-            <p>
-              I'm an <b>AI Engineer</b> with 4 years of experience designing
-              intelligent data pipelines, LLM harness engineering, and scalable
-              backend services for enterprise fintech and banking clients.
-              <br />
-              <br />I specialize in <b>Azure AI Foundry</b> deployments,
-              fine-tuned ML models for high-volume transaction filtering,
-              compliance-safe LLM integrations, and internal{" "}
-              <b>RAG tooling</b> for document intelligence.
-              <br />
-              <br />
-              Currently at <b>BCD iLabs</b> in Chicago, I build enterprise AI
-              platforms — from RAG-powered Q&A over manufacturing reports to
-              vision-LLM pipelines for real-time defect analysis — with a
-              strong foundation in Python, Java, cloud infrastructure (AWS,
-              Azure, GCP), and Azure DevOps-driven CI/CD.
-              <br />
-              <br />
-              When I'm not shipping AI systems, I enjoy listening to music,
-              watching movies, and staying active through sports and workouts.
-            </p>
+          <div className="col-lg-7">
+            <Fade direction="right" triggerOnce>
+              <div className="about-copy">
+                <p className="font-display about-lead">
+                  I'm an AI Engineer with 4 years of experience designing
+                  intelligent data pipelines, LLM systems, and scalable
+                  backend services for enterprise fintech and banking clients.
+                </p>
+                <p>
+                  I specialize in <strong>Azure AI Foundry</strong> deployments,
+                  fine-tuned ML models for high-volume transaction filtering,
+                  compliance-safe LLM integrations, and internal{" "}
+                  <strong>RAG tooling</strong> for document intelligence.
+                </p>
+                <p>
+                  Currently at <strong>BCD iLabs</strong> in Chicago, I build
+                  enterprise AI platforms — from RAG-powered Q&amp;A over
+                  manufacturing reports to vision-LLM pipelines for real-time
+                  defect analysis — on a strong foundation in Python, Java,
+                  cloud infrastructure (AWS, Azure, GCP), and Azure
+                  DevOps-driven CI/CD.
+                </p>
+                <p className="about-personal">
+                  When I'm not shipping AI systems, I enjoy music, movies, and
+                  staying active through sports and workouts.
+                </p>
+              </div>
+            </Fade>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -1,129 +1,47 @@
 import React from "react";
-import { MdSchool } from "react-icons/md";
-import { GrTechnology } from "react-icons/gr";
-import { useTheme } from "../../context/ThemeContext";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import { Fade } from "react-awesome-reveal";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import "./Education.css";
 
 const experiences = [
-  {
-    date: "2026 - Present",
-    title: "AI Engineer",
-    subtitle: "BCD iLabs - Chicago, USA",
-    icon: <GrTechnology />,
-    type: "work",
-    position: "right",
-  },
-  {
-    date: "2025 - 2026",
-    title: "Software Developer",
-    subtitle: "Sports Excitement - New York, USA",
-    icon: <GrTechnology />,
-    type: "work",
-    position: "right",
-  },
-  {
-    date: "2024 - 2025",
-    title: "Teaching Assistant, Web Development",
-    subtitle: "University of North Carolina - Charlotte, USA",
-    icon: <GrTechnology />,
-    type: "work",
-    position: "right",
-  },
-  {
-    date: "2023 - 2025",
-    title: "MS in Computer Science",
-    subtitle: "University of North Carolina - Charlotte, USA",
-    icon: <MdSchool />,
-    type: "education",
-    position: "left",
-  },
-  {
-    date: "2022 - 2023",
-    title: "Software Engineer",
-    subtitle: "Dataformatics - Mumbai, IN",
-    icon: <GrTechnology />,
-    type: "work",
-    position: "right",
-  },
-  {
-    date: "2021 - 2022",
-    title: "Software Engineer",
-    subtitle: "Tata Consultancy Limited, Mumbai, IN",
-    icon: <GrTechnology />,
-    type: "work",
-    position: "right",
-  },
-  {
-    date: "2021 - 2021",
-    title: "Software Engineer",
-    subtitle: "Tekman - Thane, IN",
-    icon: <GrTechnology />,
-    type: "work",
-    position: "right",
-  },
-  {
-    date: "2017 - 2021",
-    title: "BE in Computer Science",
-    subtitle: "Vidyalankar Institute of Technology, Mumbai, IN",
-    icon: <MdSchool />,
-    type: "education",
-    position: "left",
-  },
+  { date: "2026 — Present", title: "AI Engineer", subtitle: "BCD iLabs · Chicago, USA" },
+  { date: "2025 — 2026", title: "Software Developer", subtitle: "Sports Excitement · New York, USA" },
+  { date: "2024 — 2025", title: "Teaching Assistant, Web Development", subtitle: "University of North Carolina · Charlotte, USA" },
+  { date: "2023 — 2025", title: "MS in Computer Science", subtitle: "University of North Carolina · Charlotte, USA", edu: true },
+  { date: "2022 — 2023", title: "Software Engineer", subtitle: "Dataformatics · Mumbai, IN" },
+  { date: "2021 — 2022", title: "Software Engineer", subtitle: "Tata Consultancy Limited · Mumbai, IN" },
+  { date: "2021", title: "Software Engineer", subtitle: "Tekman · Thane, IN" },
+  { date: "2017 — 2021", title: "BE in Computer Science", subtitle: "Vidyalankar Institute of Technology · Mumbai, IN", edu: true },
 ];
 
 const Education = () => {
-  const [theme] = useTheme();
-
-  // Theme-specific styles
-  const lightTheme = {
-    contentStyle: { background: "white", color: "black" },
-    contentArrowStyle: { borderRight: "7px solid white" },
-    iconStyle: { background: "#138781", color: "#fff" },
-    lineColor: "#45c2a2",
-    dateClassName: "",
-  };
-
-  const darkTheme = {
-    contentStyle: { background: "#1e1e2f", color: "#e0e0e0" },
-    contentArrowStyle: { borderRight: "7px solid #1e1e2f" },
-    iconStyle: { background: "#e1e1e1", color: "#1e1e1e" },
-    lineColor: "#ffcc00",
-    dateClassName: "custom-date-dark",
-  };
-
-  const themeStyles = theme === "light" ? lightTheme : darkTheme;
-
   return (
-    <section className="container education section2" id="education">
-      <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
-        Career Timeline
-      </h2>
-      <hr />
-      <VerticalTimeline lineColor={themeStyles.lineColor}>
-        {experiences.map((exp, index) => (
-          <VerticalTimelineElement
-            key={index}
-            className={`vertical-timeline-element--${exp.type}`}
-            contentStyle={themeStyles.contentStyle}
-            contentArrowStyle={themeStyles.contentArrowStyle}
-            date={exp.date}
-            dateClassName={themeStyles.dateClassName}
-            iconStyle={themeStyles.iconStyle}
-            icon={exp.icon}
-            position={exp.position}
-          >
-            <h3 className="vertical-timeline-element-title">{exp.title}</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              {exp.subtitle}
-            </h4>
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
+    <section className="section hairline-top" id="education">
+      <div className="wrap">
+        <SectionHeading
+          index="05"
+          eyebrow="Journey"
+          title="The road so far."
+          lede="From Mumbai to Chicago — engineering roles across fintech, startups, and now enterprise AI."
+        />
+        <Fade direction="up" triggerOnce>
+          <ol className="timeline">
+            {experiences.map((exp) => (
+              <li className="timeline-item" key={`${exp.date}-${exp.title}`}>
+                <span className="timeline-dot" aria-hidden="true" />
+                <div className="timeline-body">
+                  <span className="timeline-date">{exp.date}</span>
+                  <h3 className="font-display">
+                    {exp.title}
+                    {exp.edu && <span className="timeline-tag">Education</span>}
+                  </h3>
+                  <p>{exp.subtitle}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </Fade>
+      </div>
     </section>
   );
 };

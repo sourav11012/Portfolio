@@ -1,0 +1,12 @@
+.app-shell {
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* Keep the old theme id harmless — the redesign is a single polished theme */
+#dark,
+#light {
+  background: var(--paper);
+  color: var(--ink);
+}
