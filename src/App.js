@@ -8,6 +8,7 @@ import ScrollToTop from "react-scroll-to-top";
 import Projects from "./pages/Projects/Projects";
 import Techstack from "./pages/Techstack/Techstack";
 import AIWork from "./pages/AIWork/AIWork";
+import Spotlight from "./pages/Spotlight/Spotlight";
 import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -22,6 +23,7 @@ function App() {
         <Home />
         <About />
         <AIWork />
+        <Spotlight />
         <Projects />
         <Techstack />
         <Education />

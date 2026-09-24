@@ -18,17 +18,27 @@ const projects = [
     tags: ["Azure OpenAI", "Semantic Kernel", "RAG"],
     description:
       "Enterprise internal Q&A platform letting analysts query manufacturing reports and compliance documents in natural language, with agentic multi-step workflows inside the Azure tenant boundary.",
-    link: "https://bcdilabs.com/innovate-nxt",
+    link: "https://github.com/sourav11012",
   },
   {
-    title: "Foresight — Vision LLM Pipeline",
+    title: "UnitedVision — Vision AI Platform",
     badge: "AI · Vision",
     image: ForesightImg,
-    alt: "Foresight vision pipeline",
+    alt: "UnitedVision vision AI platform",
     tags: ["YOLO", "Custom Vision", "Azure OpenAI"],
     description:
-      "Vision LLM pipeline that inspects manufacturing lines in real time, routing defect-escalated frames to Azure OpenAI for automated root-cause analysis.",
-    link: "https://bcdilabs.com/united-vision",
+      "Self-service Vision AI for manufacturing — real-time defect detection on live lines, with defect-escalated frames routed to Azure OpenAI for automated root-cause analysis.",
+    link: "https://bcdilabs.com/united-vision/",
+  },
+  {
+    title: "Foresight — LLM Formulation Intelligence",
+    badge: "AI · LLM",
+    image: InsightImg,
+    alt: "Foresight formulation intelligence",
+    tags: ["Azure OpenAI", "Semantic Kernel", "RAG"],
+    description:
+      "LLM-powered decision support for flavor houses — brief interpretation, candidate screening and guardrailed experiment recommendations with 90% less processing time.",
+    link: "https://bcdilabs.com/innovate-nxt/",
   },
   {
     title: "Imaginify — AI SaaS Platform",

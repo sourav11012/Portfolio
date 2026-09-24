@@ -7,6 +7,7 @@ import "./Navbar.css";
 const links = [
   { to: "about", label: "About" },
   { to: "aiwork", label: "AI Work" },
+  { to: "spotlight", label: "Spotlight" },
   { to: "project", label: "Projects" },
   { to: "techstack", label: "Stack" },
   { to: "education", label: "Journey" },

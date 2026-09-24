@@ -1,0 +1,330 @@
+.spotlight-section {
+  padding: 120px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+.spotlight-lede {
+  max-width: 60ch;
+  margin-top: 26px;
+}
+
+.spotlight-lede p {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+.spotlight-list {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+
+.spot-card {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.spot-card-flip .spot-media {
+  order: 2;
+}
+
+.spot-card-flip .spot-body {
+  order: 1;
+}
+
+/* ---------- visual panel ---------- */
+
+.spot-visual-dark {
+  background: var(--dark);
+  border-radius: 20px;
+  padding: 28px 28px 22px;
+  border: 1px solid rgba(28, 36, 32, 0.9);
+  box-shadow: 0 30px 60px -30px rgba(28, 36, 32, 0.35);
+}
+
+.spot-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.spot-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.spot-chips span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--paper-on-dark);
+  border: 1px solid rgba(244, 239, 228, 0.22);
+  border-radius: 999px;
+  padding: 7px 13px;
+}
+
+/* vision svg */
+
+.uv-grid {
+  stroke: rgba(244, 239, 228, 0.07);
+  stroke-width: 1;
+}
+
+.uv-corner {
+  fill: none;
+  stroke: var(--paper-on-dark);
+  stroke-width: 2.5;
+  opacity: 0.85;
+}
+
+.uv-scan {
+  fill: var(--accent);
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px rgba(74, 124, 89, 0.9));
+}
+
+.uv-detect {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 7 5;
+  rx: 2;
+}
+
+.uv-ping {
+  fill: var(--accent);
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.uv-label {
+  fill: var(--paper-on-dark);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.uv-caption,
+.rag-caption {
+  fill: var(--muted-on-dark);
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.rag-caption-wide {
+  text-anchor: middle;
+}
+
+/* rag svg */
+
+.rag-flow {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 7 7;
+  opacity: 0.85;
+}
+
+.rag-dot {
+  fill: #9dc3ad;
+}
+
+.rag-circle {
+  fill: none;
+  stroke: var(--paper-on-dark);
+  stroke-width: 2;
+  opacity: 0.9;
+}
+
+.rag-circle-accent {
+  stroke: var(--accent);
+  fill: rgba(74, 124, 89, 0.18);
+}
+
+.rag-node-label {
+  fill: var(--paper-on-dark);
+  font-size: 16px;
+  text-anchor: middle;
+}
+
+.rag-caption {
+  text-anchor: middle;
+}
+
+.rag-chip-bg {
+  fill: rgba(244, 239, 228, 0.08);
+  stroke: rgba(244, 239, 228, 0.25);
+  stroke-width: 1;
+}
+
+.rag-chip-label {
+  fill: var(--paper-on-dark);
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-anchor: middle;
+}
+
+/* ---------- body ---------- */
+
+.spot-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--accent);
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+}
+
+.spot-title {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.spot-product {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+.spot-desc {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.spot-work-label {
+  margin: 30px 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.spot-points {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.spot-points li {
+  position: relative;
+  padding: 12px 0 12px 26px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.spot-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 21px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.spot-stats {
+  display: flex;
+  gap: 44px;
+  margin-top: 30px;
+}
+
+.spot-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.spot-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.spot-stat-label {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  max-width: 18ch;
+  line-height: 1.5;
+}
+
+.spot-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 6px;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.spot-link:hover {
+  gap: 14px;
+  color: var(--accent-deep);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 960px) {
+  .spot-card,
+  .spot-card-flip .spot-media,
+  .spot-card-flip .spot-body {
+    grid-template-columns: 1fr;
+    order: initial;
+  }
+
+  .spot-card {
+    gap: 40px;
+  }
+
+  .spotlight-list {
+    gap: 84px;
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .spotlight-section {
+    padding: 84px 0;
+  }
+
+  .spot-stats {
+    gap: 28px;
+  }
+
+  .spot-visual-dark {
+    padding: 20px 18px 16px;
+  }
+}
