@@ -1,61 +1,54 @@
-name: Deploy Portfolio App to EC2
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main # adjust if your default branch is different
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # 2️⃣ Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
+          cache: npm
 
-      # 3️⃣ Install & build React client locally
-      - name: Build React client
-        run: |
-          cd client
-          npm install --legacy-peer-deps
-          npm run build
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
         env:
           CI: false
 
-      # 4️⃣ Setup SSH key into a temp file
-      - name: Setup SSH key
-        run: |
-          echo "${{ secrets.EC2_SSH_KEY }}" > private_key.pem
-          chmod 600 private_key.pem
+      - name: Build
+        run: npm run build
+        env:
+          CI: false
 
-      # 5️⃣ Copy React build folder to EC2 using rsync
-      - name: Deploy React build via rsync
-        run: |
-          rsync -avz --delete --exclude 'node_modules' --exclude '.cache' -e "ssh -i private_key.pem -o StrictHostKeyChecking=no" client/build/ ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:~/app/client/build/
-
-      # 6️⃣ Install backend deps & restart Node app
-      - name: Deploy backend and restart PM2
-        uses: appleboy/ssh-action@master
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            cd ~/app
-            git fetch origin main
-            git reset --hard origin/main
+          path: ./build
 
-            # Install backend dependencies
-            npm install --legacy-peer-deps
-
-            # Restart Node app with PM2
-            pm2 restart portfolio-app || pm2 start server.js --name portfolio-app
-
-            echo "✅ Deployment complete!"
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

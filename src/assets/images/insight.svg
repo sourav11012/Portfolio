@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2027"/>
+      <stop offset="0.5" stop-color="#203a43"/>
+      <stop offset="1" stop-color="#2c5364"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#g)"/>
+  <g fill="none" stroke="#5eead4" stroke-width="3" opacity="0.9">
+    <rect x="90" y="70" width="150" height="200" rx="10"/>
+    <line x1="115" y1="110" x2="215" y2="110" stroke-width="4"/>
+    <line x1="115" y1="140" x2="215" y2="140" stroke-width="4" opacity="0.6"/>
+    <line x1="115" y1="170" x2="190" y2="170" stroke-width="4" opacity="0.6"/>
+    <line x1="115" y1="200" x2="215" y2="200" stroke-width="4" opacity="0.6"/>
+    <circle cx="400" cy="170" r="70"/>
+    <circle cx="400" cy="170" r="40" opacity="0.5"/>
+    <line x1="240" y1="170" x2="330" y2="170" stroke-dasharray="8 6"/>
+  </g>
+  <text x="300" y="315" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="bold" letter-spacing="4">RAG Q&amp;A PLATFORM</text>
+</svg>
