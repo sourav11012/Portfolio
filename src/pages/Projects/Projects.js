@@ -18,7 +18,7 @@ const projects = [
     tags: ["Azure OpenAI", "Semantic Kernel", "RAG"],
     description:
       "Enterprise internal Q&A platform letting analysts query manufacturing reports and compliance documents in natural language, with agentic multi-step workflows inside the Azure tenant boundary.",
-    link: "https://github.com/sourav11012",
+    link: "https://bcdilabs.com/innovate-nxt",
   },
   {
     title: "Foresight — Vision LLM Pipeline",
@@ -28,7 +28,7 @@ const projects = [
     tags: ["YOLO", "Custom Vision", "Azure OpenAI"],
     description:
       "Vision LLM pipeline that inspects manufacturing lines in real time, routing defect-escalated frames to Azure OpenAI for automated root-cause analysis.",
-    link: "https://github.com/sourav11012",
+    link: "https://bcdilabs.com/united-vision",
   },
   {
     title: "Imaginify — AI SaaS Platform",
